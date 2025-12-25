@@ -30,6 +30,11 @@ public class PlaceGrid_AR : MonoBehaviour
         placedGrid.transform.localScale = Vector3.one * scaleValue;
     }
 
+    public GridMaster GetGridMaster()
+    {
+        if (placedGrid == null) return null;
+        return placedGrid.GetComponentInChildren<GridMaster>();
+    }
     void Awake()
     {
         if (arCamera == null) arCamera = Camera.main;

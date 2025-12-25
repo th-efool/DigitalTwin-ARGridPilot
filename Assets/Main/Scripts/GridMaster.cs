@@ -12,17 +12,44 @@ public class GridMaster : MonoBehaviour
     public GameObject robotObject;
     public float cellSize = 1f;
     public float padding = 0.2f;
-    public int Length = 3;
+    public int Length = 2;
     public int currentRobotTile = 0;
 
     private int _centerTileIndex;
     private Vector3[] locations;
     private GameObject[] grid;
 
+    public static GridMaster Instance { get; private set; }
+
+    [Header("Animation")]
+    [SerializeField] private Animator robotAnimator;          // drag child with Animator here
+    [SerializeField] private string walkingBoolName = "isWalking";
+    private int walkingBoolHash;
+
+
+    void Awake()
+    {
+        Instance = this;
+
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+            Instance = null;
+    }
     void Start()
     {
         SpawnGrid();
         _centerTileIndex = Mathf.FloorToInt(Length / 2f);
+
+        // --- animation init (minimal) ---
+        if (robotAnimator == null && robotObject != null)
+            robotAnimator = robotObject.GetComponentInChildren<Animator>();
+
+        if (!string.IsNullOrEmpty(walkingBoolName))
+            walkingBoolHash = Animator.StringToHash(walkingBoolName);
+
     }
 
     void Update()
@@ -100,6 +127,8 @@ public class GridMaster : MonoBehaviour
         }
     }
 
+
+
     public bool TryMoveTo(int targetIndex)
     {
         if (!IsInMovableRange(targetIndex, currentRobotTile)) return false;
@@ -136,7 +165,7 @@ public class GridMaster : MonoBehaviour
         bool isAdjacent = Mathf.Abs(rowDiff) <= 1 && Mathf.Abs(colDiff) <= 1;
         bool isOrthogonal = (Mathf.Abs(rowDiff) + Mathf.Abs(colDiff)) == 1;
 
-        return isAdjacent && isOrthogonal;
+        return isAdjacent;
     }
 
     public void SetMaterial(GameObject target, bool useA)
@@ -244,16 +273,32 @@ public class GridMaster : MonoBehaviour
         currentRobotTile = targetTile;
 
         if (moveRoutine != null) StopCoroutine(moveRoutine);
+
+        SetWalking(true); // start walking anim
         moveRoutine = StartCoroutine(SmoothMove(locations[targetTile]));
     }
+
 
     [SerializeField] float spinsPerMove = 1f;   // number of full 360° turns per move
 
     IEnumerator SmoothMove(Vector3 targetLocalPos)
     {
-        if (robotObject == null) yield break;
+        if (robotObject == null)
+        {
+            SetWalking(false);
+            yield break;
+        }
 
         Vector3 startPos = robotObject.transform.localPosition;
+        Quaternion startRot = robotObject.transform.localRotation;
+
+        // face direction of movement
+        Vector3 moveDir = targetLocalPos - startPos;
+        moveDir.y = 0f;
+        Quaternion targetRot = moveDir.sqrMagnitude > 0.0001f
+            ? Quaternion.LookRotation(moveDir.normalized, Vector3.up)
+            : startRot;
+
         float time = 0f;
 
         while (time < moveDuration)
@@ -261,20 +306,27 @@ public class GridMaster : MonoBehaviour
             time += Time.deltaTime;
             float t = Mathf.SmoothStep(0f, 1f, time / moveDuration);
 
-            // --- Movement ---
+            // movement
             robotObject.transform.localPosition = Vector3.Lerp(startPos, targetLocalPos, t);
-
-            // --- Rotation ---
-            float totalDegrees = spinsPerMove * 360f;     // total rotation for whole movement
-            float currentDegrees = totalDegrees * Time.deltaTime / moveDuration;
-            robotObject.transform.Rotate(Vector3.up, currentDegrees, Space.Self);
+            // rotation towards movement direction
+            robotObject.transform.localRotation = Quaternion.Slerp(startRot, targetRot, t);
 
             yield return null;
         }
 
         robotObject.transform.localPosition = targetLocalPos;
+        robotObject.transform.localRotation = targetRot;
 
         HighlightCurrentMoveableRegions();
+
+        SetWalking(false); // stop walking anim
     }
+
+    private void SetWalking(bool walking)
+    {
+        if (robotAnimator == null || walkingBoolHash == 0) return;
+        robotAnimator.SetBool(walkingBoolHash, walking);
+    }
+
 
 }
