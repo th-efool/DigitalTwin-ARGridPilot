@@ -284,6 +284,7 @@ public class GridMaster : MonoBehaviour
 
     public float moveDuration = 0.4f;
     Coroutine moveRoutine;
+    [SerializeField] float spinsPerMove = 1f;   // number of full 360° turns per move
 
     public void MovePlayerTo(int targetTile)
     {
@@ -294,13 +295,10 @@ public class GridMaster : MonoBehaviour
         if (moveRoutine != null) StopCoroutine(moveRoutine);
 
         SetWalking(true); // start walking anim
-        moveRoutine = StartCoroutine(SmoothMove(locations[targetTile]));
+        moveRoutine = StartCoroutine(SmoothMove(locations[targetTile], targetTile));
     }
 
-
-    [SerializeField] float spinsPerMove = 1f;   // number of full 360° turns per move
-
-    IEnumerator SmoothMove(Vector3 targetLocalPos)
+    IEnumerator SmoothMove(Vector3 targetLocalPos, int targetTile)
     {
         if (robotObject == null)
         {
@@ -321,8 +319,21 @@ public class GridMaster : MonoBehaviour
         float time = 0f;
         TurnOffGridColor();
 
+        GameObject targetGridTile = grid[targetTile];
+        Renderer targetRenderer = targetGridTile.GetComponent<Renderer>();
+        Vector3 originalScale = targetGridTile.transform.localScale;
+
+        // force red highlight
+        if (targetRenderer != null)
+            targetRenderer.sharedMaterial = materialA;
+
+
         while (time < moveDuration)
         {
+            // pulse animation (sin wave)
+            float pulse = 1f + Mathf.Sin(Time.time * 8f) * 0.15f;
+            targetGridTile.transform.localScale = originalScale * pulse;
+
             time += Time.deltaTime;
             float t = Mathf.SmoothStep(0f, 1f, time / moveDuration);
 
@@ -333,6 +344,9 @@ public class GridMaster : MonoBehaviour
 
             yield return null;
         }
+        // restore scale
+        targetGridTile.transform.localScale = originalScale;
+
         HighlightCurrentMoveableRegions(highlightDelay);
         robotObject.transform.localPosition = targetLocalPos;
         robotObject.transform.localRotation = targetRot;
