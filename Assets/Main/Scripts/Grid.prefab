@@ -274,9 +274,10 @@ MonoBehaviour:
   padding: 0.3
   Length: 4
   currentRobotTile: 0
+  highlightDelay: 0.7
   robotAnimator: {fileID: 188693005349222113}
   walkingBoolName: Walk_Anim
-  moveDuration: 2
+  moveDuration: 2.8
   spinsPerMove: 0
 --- !u!1 &9023618667468452298
 GameObject:

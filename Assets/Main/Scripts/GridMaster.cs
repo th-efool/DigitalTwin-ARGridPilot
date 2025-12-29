@@ -18,6 +18,7 @@ public class GridMaster : MonoBehaviour
     private int _centerTileIndex;
     private Vector3[] locations;
     private GameObject[] grid;
+    [SerializeField] private float highlightDelay = 0.25f;
 
     public static GridMaster Instance { get; private set; }
 
@@ -137,13 +138,31 @@ public class GridMaster : MonoBehaviour
         return true;
     }
 
-    void HighlightCurrentMoveableRegions()
+    void HighlightCurrentMoveableRegions(float delay)
     {
+        StartCoroutine(HighlightAfterDelay(delay));
+    }
+
+    IEnumerator HighlightAfterDelay(float delay)
+    {
+        if (highlightDelay > 0f)
+            yield return new WaitForSeconds(delay);
+
         for (int i = 0; i < Length * Length; i++)
         {
             SetMaterial(grid[i], IsInMovableRange(i, currentRobotTile));
         }
     }
+
+    void TurnOffGridColor()
+    {
+        for (int i = 0; i < Length * Length; i++)
+        {
+            SetMaterial(grid[i], false);
+
+        }
+    }
+
 
     bool IsInMovableRange(int locationToMove, int currentlocation)
     {
@@ -238,7 +257,7 @@ public class GridMaster : MonoBehaviour
         }
 
         robotObject.transform.localPosition = locations[currentRobotTile];
-        HighlightCurrentMoveableRegions();
+        HighlightCurrentMoveableRegions(highlightDelay);
     }
 
     void ReCalculatePostion()
@@ -265,6 +284,7 @@ public class GridMaster : MonoBehaviour
 
     public float moveDuration = 0.4f;
     Coroutine moveRoutine;
+    [SerializeField] float spinsPerMove = 1f;   // number of full 360° turns per move
 
     public void MovePlayerTo(int targetTile)
     {
@@ -275,13 +295,15 @@ public class GridMaster : MonoBehaviour
         if (moveRoutine != null) StopCoroutine(moveRoutine);
 
         SetWalking(true); // start walking anim
-        moveRoutine = StartCoroutine(SmoothMove(locations[targetTile]));
+        moveRoutine = StartCoroutine(SmoothMove(locations[targetTile], targetTile));
     }
 
+    [Header("Tile Grid Animation")]
+    [SerializeField] public float ScaleAnim_sineStartingPoint = 1.04f;
+    [SerializeField] public float ScaleAnim_sineAmplifier = 0.15f;
+    [SerializeField] public float ScaleAnim_sinefrequency = 8.0f;
 
-    [SerializeField] float spinsPerMove = 1f;   // number of full 360° turns per move
-
-    IEnumerator SmoothMove(Vector3 targetLocalPos)
+    IEnumerator SmoothMove(Vector3 targetLocalPos, int targetTile)
     {
         if (robotObject == null)
         {
@@ -300,9 +322,23 @@ public class GridMaster : MonoBehaviour
             : startRot;
 
         float time = 0f;
+        TurnOffGridColor();
+
+        GameObject targetGridTile = grid[targetTile];
+        Renderer targetRenderer = targetGridTile.GetComponent<Renderer>();
+        Vector3 originalScale = targetGridTile.transform.localScale;
+
+        // force red highlight
+        if (targetRenderer != null)
+            targetRenderer.sharedMaterial = materialA;
+
 
         while (time < moveDuration)
         {
+            // pulse animation (sin wave)
+            float pulse = ScaleAnim_sineStartingPoint + Mathf.Sin(Time.time * ScaleAnim_sinefrequency) * ScaleAnim_sineAmplifier;
+            targetGridTile.transform.localScale = originalScale * pulse;
+
             time += Time.deltaTime;
             float t = Mathf.SmoothStep(0f, 1f, time / moveDuration);
 
@@ -313,11 +349,13 @@ public class GridMaster : MonoBehaviour
 
             yield return null;
         }
+        // restore scale
+        targetGridTile.transform.localScale = originalScale;
 
+        HighlightCurrentMoveableRegions(highlightDelay);
         robotObject.transform.localPosition = targetLocalPos;
         robotObject.transform.localRotation = targetRot;
 
-        HighlightCurrentMoveableRegions();
 
         SetWalking(false); // stop walking anim
     }
