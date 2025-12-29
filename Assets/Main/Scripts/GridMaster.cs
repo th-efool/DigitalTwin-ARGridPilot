@@ -298,6 +298,11 @@ public class GridMaster : MonoBehaviour
         moveRoutine = StartCoroutine(SmoothMove(locations[targetTile], targetTile));
     }
 
+    [Header("Tile Grid Animation")]
+    [SerializeField] public float ScaleAnim_sineStartingPoint = 1.04f;
+    [SerializeField] public float ScaleAnim_sineAmplifier = 0.15f;
+    [SerializeField] public float ScaleAnim_sinefrequency = 8.0f;
+
     IEnumerator SmoothMove(Vector3 targetLocalPos, int targetTile)
     {
         if (robotObject == null)
@@ -331,7 +336,7 @@ public class GridMaster : MonoBehaviour
         while (time < moveDuration)
         {
             // pulse animation (sin wave)
-            float pulse = 1.05f + Mathf.Sin(Time.time * 8f) * 0.15f;
+            float pulse = ScaleAnim_sineStartingPoint + Mathf.Sin(Time.time * ScaleAnim_sinefrequency) * ScaleAnim_sineAmplifier;
             targetGridTile.transform.localScale = originalScale * pulse;
 
             time += Time.deltaTime;
