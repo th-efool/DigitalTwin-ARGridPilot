@@ -7,6 +7,17 @@ Each tap on the physical piezo array is streamed into Unity and interpreted as a
 
 The system is designed for **robotic control, signal encoding, and human–machine interaction research**, including **Morse-style patterned inputs** and spatial command sequences.
 
+![Unity](https://img.shields.io/badge/Engine-Unity-black?logo=unity)
+![Arduino](https://img.shields.io/badge/Hardware-Arduino-00979D?logo=arduino)
+![AR Foundation](https://img.shields.io/badge/AR-AR%20Foundation-blueviolet)
+![Digital Twin](https://img.shields.io/badge/Architecture-Digital%20Twin-blue)
+![Robotics](https://img.shields.io/badge/Domain-Robotics%20Control-darkgreen)
+![Sensors](https://img.shields.io/badge/Input-Piezo%20Sensors-orange)
+![Serial](https://img.shields.io/badge/Comm-Serial%20USB-lightgrey)
+![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20PC-informational)
+![Status](https://img.shields.io/badge/Status-Prototype%20%2F%20Research-yellow)
+
+
 <p align="center">
   <img 
     src="https://github.com/th-efool/DigitalTwin-PizeoSensorARGridPilot/blob/main/Assets/p/WhatsApp%20Image%202025-12-30%20at%2009.56.45.jpeg?raw=true" 
@@ -73,6 +84,22 @@ Unity Runtime
 ```
 
 ---
+Arduino Integration (Piezo Grid → Unity)
+
+The physical input layer is implemented using an Arduino-based piezo sensor array, where each piezo element corresponds to a cell in the logical n×n grid used by the Digital Twin.
+
+Hardware Role
+
+Each piezo sensor is wired to a dedicated Arduino input channel
+
+A tap generates an analog spike whose magnitude reflects impact intensity
+
+The Arduino performs thresholding and debouncing to detect valid taps
+
+Each detected tap is mapped to a grid index in the range 0 … (n×n − 1)
+
+The Arduino does not attempt to interpret motion or behavior.
+It acts as a deterministic signal encoder, keeping the hardware simple and predictable.
 
 ## Key Components
 
