@@ -7,6 +7,36 @@ Each tap on the physical piezo array is streamed into Unity and interpreted as a
 
 The system is designed for **robotic control, signal encoding, and human–machine interaction research**, including **Morse-style patterned inputs** and spatial command sequences.
 
+<p align="center">
+  <img 
+    src="https://github.com/th-efool/DigitalTwin-PizeoSensorARGridPilot/blob/main/Assets/p/WhatsApp%20Image%202025-12-30%20at%2009.56.45.jpeg?raw=true" 
+    width="100%" 
+  />
+</p>
+
+<table>
+  <tr>
+    <td align="center">
+      <img 
+        src="https://github.com/th-efool/DigitalTwin-PizeoSensorARGridPilot/blob/main/Assets/p/screenshot20251230095840.png?raw=true" 
+        width="100%"
+      />
+    </td>
+    <td align="center">
+      <img 
+        src="https://github.com/th-efool/DigitalTwin-PizeoSensorARGridPilot/blob/main/Assets/p/screenshot20251230095919.png?raw=true" 
+        width="100%"
+      />
+    </td>
+    <td align="center">
+      <img 
+        src="https://github.com/th-efool/DigitalTwin-PizeoSensorARGridPilot/blob/main/Assets/p/screenshot20251230095927.png?raw=true" 
+        width="100%"
+      />
+    </td>
+  </tr>
+</table>
+
 ---
 
 ## Core Idea
