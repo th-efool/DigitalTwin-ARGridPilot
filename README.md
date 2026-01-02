@@ -1,12 +1,5 @@
 # Modular Piezo Grid Interface for Digital Twin Control
 
-## Overview
-
-This project implements a **modular piezo-sensor tap interface** that maps a physical **n×n soft-input grid** to a **Unity-based Digital Twin**.
-Each tap on the physical piezo array is streamed into Unity and interpreted as a **discrete, intensity-aware control signal**, enabling structured interaction with a virtual robot.
-
-The system is designed for **robotic control, signal encoding, and human–machine interaction research**, including **Morse-style patterned inputs** and spatial command sequences.
-
 ![Unity](https://img.shields.io/badge/Engine-Unity-black?logo=unity)
 ![Arduino](https://img.shields.io/badge/Hardware-Arduino-00979D?logo=arduino)
 ![AR Foundation](https://img.shields.io/badge/AR-AR%20Foundation-blueviolet)
@@ -16,6 +9,13 @@ The system is designed for **robotic control, signal encoding, and human–machi
 ![Serial](https://img.shields.io/badge/Comm-Serial%20USB-lightgrey)
 ![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20PC-informational)
 ![Status](https://img.shields.io/badge/Status-Prototype%20%2F%20Research-yellow)
+
+## Overview
+
+This project implements a **modular piezo-sensor tap interface** that maps a physical **n×n soft-input grid** to a **Unity-based Digital Twin**.
+Each tap on the physical piezo array is streamed into Unity and interpreted as a **discrete, intensity-aware control signal**, enabling structured interaction with a virtual robot.
+
+The system is designed for **robotic control, signal encoding, and human–machine interaction research**, including **Morse-style patterned inputs** and spatial command sequences.
 
 
 <p align="center">
