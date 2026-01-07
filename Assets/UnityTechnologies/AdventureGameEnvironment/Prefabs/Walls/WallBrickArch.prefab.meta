@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9ef96bde239e4a54d85d2a9512648c1b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Walls/WallBrickArch.prefab
+  uploadId: 562967

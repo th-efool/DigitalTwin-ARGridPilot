@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b12f3c9e3e2f22b46877cd4345c5bb53
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Floor/FloorMetalPanelSingle.prefab
+  uploadId: 562967

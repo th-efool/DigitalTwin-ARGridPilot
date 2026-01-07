@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f90bf9b0f87d6d84084cc35de3c47672
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Walls/WallSciFiCornerInner.prefab
+  uploadId: 562967

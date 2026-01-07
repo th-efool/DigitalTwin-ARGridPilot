@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ec192a24ffdca6d47b2054f86275a283
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Lights/FloorHologramLightSingle.prefab
+  uploadId: 562967

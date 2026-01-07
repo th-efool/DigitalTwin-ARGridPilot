@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5a68483ba9764354ead16db19e43947b
+timeCreated: 1460125454
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Materials/GlassesMaterial.mat
+  uploadId: 562967

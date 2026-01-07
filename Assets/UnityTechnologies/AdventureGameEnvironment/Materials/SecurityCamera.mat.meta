@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3f386ec83100d844b94a7a5b79ffb81d
+timeCreated: 1461671516
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Materials/SecurityCamera.mat
+  uploadId: 562967

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 30f67898d193ad64f9aae16d561950d2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Walls/WallSciFiDoor.prefab
+  uploadId: 562967

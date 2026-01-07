@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 780fb0520743e184eacdccf5433d1bae
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Signs/SignTheBlueBar.prefab
+  uploadId: 562967

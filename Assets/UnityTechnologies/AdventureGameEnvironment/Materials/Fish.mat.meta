@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 329c7db3030cc1d418a9f416eaed765f
+timeCreated: 1460125726
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Materials/Fish.mat
+  uploadId: 562967

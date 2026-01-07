@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 18b73e95c08e7624d88d2200187d9cb3
+timeCreated: 1459869127
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Materials/BlackUnlit.mat
+  uploadId: 562967

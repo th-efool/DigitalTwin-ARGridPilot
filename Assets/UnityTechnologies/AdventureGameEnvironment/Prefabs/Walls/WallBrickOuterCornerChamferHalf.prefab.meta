@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 759d910f049ba204a84585992ebb8d5a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Walls/WallBrickOuterCornerChamferHalf.prefab
+  uploadId: 562967

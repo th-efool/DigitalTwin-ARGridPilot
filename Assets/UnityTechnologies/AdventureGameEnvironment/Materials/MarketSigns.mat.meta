@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 71e4cc976fb954d489e47c27ba9c6950
+timeCreated: 1460125726
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Materials/MarketSigns.mat
+  uploadId: 562967

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b259f1ffcd5d9ea4695ec7e48768edd3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Props/CoffeeCup.prefab
+  uploadId: 562967

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 19d0ee1a417925741ad4e9e009482cd5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Walls/WallBrickHalf.prefab
+  uploadId: 562967

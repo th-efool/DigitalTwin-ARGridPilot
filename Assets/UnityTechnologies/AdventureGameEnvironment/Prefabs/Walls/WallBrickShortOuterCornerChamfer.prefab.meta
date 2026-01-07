@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a8571ee59bdb01246823d548691a2736
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Walls/WallBrickShortOuterCornerChamfer.prefab
+  uploadId: 562967
