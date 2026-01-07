@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bdb6658887a0cff41bb401d598c25c5c
+timeCreated: 1469798020
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Materials/SciFiRoomHologramLight.mat
+  uploadId: 562967

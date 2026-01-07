@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 445f84d7d07ddc1439b45b3eb63efd9b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Walls/WallMetalDoor.prefab
+  uploadId: 562967

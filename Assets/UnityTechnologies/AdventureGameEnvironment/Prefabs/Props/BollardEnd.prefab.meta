@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ca405b6cbaa41dc419fcbc8d407b0554
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Props/BollardEnd.prefab
+  uploadId: 562967

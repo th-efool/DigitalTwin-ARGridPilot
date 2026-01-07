@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 68f7b47bfca706547a58db4d63545319
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Walls/WallSciFiSmall.prefab
+  uploadId: 562967

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4b04af6a52634ee44b27bd97398bf9be
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Walls/WallMetalShort.prefab
+  uploadId: 562967

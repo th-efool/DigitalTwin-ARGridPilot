@@ -231,7 +231,7 @@ public class GridMaster : MonoBehaviour
             var instance = Instantiate(gridObject, transform);
             instance.transform.localPosition = locations[i];
             instance.transform.localRotation = Quaternion.identity;
-            instance.transform.localScale = new Vector3(cellSize, cellSize / 10f, cellSize);
+          instance.transform.localScale = new Vector3(cellSize, cellSize, cellSize);
             robotObject.transform.localScale = new Vector3(cellSize, cellSize, cellSize);
 
             instance.name = $"GridTile_{i}";
@@ -253,7 +253,7 @@ public class GridMaster : MonoBehaviour
         for (int i = 0; i < locations.Length; i++)
         {
             grid[i].transform.localPosition = locations[i];
-            grid[i].transform.localScale = new Vector3(cellSize, cellSize / 100f, cellSize);
+            grid[i].transform.localScale = new Vector3(cellSize, cellSize , cellSize);
         }
 
         robotObject.transform.localPosition = locations[currentRobotTile];

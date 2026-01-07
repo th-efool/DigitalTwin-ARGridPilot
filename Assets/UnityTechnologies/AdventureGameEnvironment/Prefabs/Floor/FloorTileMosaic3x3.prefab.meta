@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6acf820e9a504d94dbdb18de3d4966bb
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Floor/FloorTileMosaic3x3.prefab
+  uploadId: 562967

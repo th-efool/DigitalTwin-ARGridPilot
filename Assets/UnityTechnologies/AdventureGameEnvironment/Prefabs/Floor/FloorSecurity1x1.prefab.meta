@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6d1e22bf6ee380d479673985f3e4f238
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Floor/FloorSecurity1x1.prefab
+  uploadId: 562967

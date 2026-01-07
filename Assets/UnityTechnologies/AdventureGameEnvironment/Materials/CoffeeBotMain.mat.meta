@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 55ac6b62b46001749b9938e358b3c0ad
+timeCreated: 1460458593
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Materials/CoffeeBotMain.mat
+  uploadId: 562967

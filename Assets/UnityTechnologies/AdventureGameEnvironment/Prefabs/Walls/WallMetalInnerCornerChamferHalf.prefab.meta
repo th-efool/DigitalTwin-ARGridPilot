@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 00e50f20411d58045b517fc66d8c8621
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Walls/WallMetalInnerCornerChamferHalf.prefab
+  uploadId: 562967

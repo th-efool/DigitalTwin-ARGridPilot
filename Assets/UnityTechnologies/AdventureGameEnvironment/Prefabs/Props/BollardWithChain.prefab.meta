@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cfc4a6058dc9c06478039a243343b0a5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Props/BollardWithChain.prefab
+  uploadId: 562967

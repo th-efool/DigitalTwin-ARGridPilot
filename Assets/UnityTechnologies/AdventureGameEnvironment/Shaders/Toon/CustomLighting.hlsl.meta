@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 933a4c278452da5439f18725676f1720
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Shaders/Toon/CustomLighting.hlsl
+  uploadId: 562967

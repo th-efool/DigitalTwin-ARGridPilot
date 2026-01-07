@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 62ffeeef899941e4da96f32741eface6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Props/Coin.prefab
+  uploadId: 562967

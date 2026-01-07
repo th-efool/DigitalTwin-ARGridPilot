@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 07a6f0dede49a254997dac3f83d46b3c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Floor/FloorTileMosaicDoubleChamfer.prefab
+  uploadId: 562967

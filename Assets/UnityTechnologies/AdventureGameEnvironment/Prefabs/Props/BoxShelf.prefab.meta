@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b793731683c8ecd439814deb84281f56
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246189
+  packageName: Adventure Game Environment Pack | URP
+  packageVersion: 1.0
+  assetPath: Assets/UnityTechnologies/AdventureGameEnvironment/Prefabs/Props/BoxShelf.prefab
+  uploadId: 562967
